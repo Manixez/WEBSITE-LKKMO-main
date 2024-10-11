@@ -1,0 +1,133 @@
+/* Styling umum untuk body */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;  /* Tambahkan ini untuk memastikan lebar penuh */
+  font-family: 'Arial', sans-serif;
+  background-image: url('bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.register-container {
+  background-color: rgba(255, 255, 255, 0.15); 
+  border-radius: 15px;
+  padding: 30px;
+  width: 320px; /* Sesuai gambar */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+
+.logo img {
+  width: 60px; /* Ukuran logo lebih kecil */
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 400; /* Font lebih ringan */
+  color: #2E7D32;
+  margin-bottom: 15px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-field {
+  padding: 10px; /* Memberi ruang yang lebih untuk teks di dalam input */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px; /* Ukuran font sedikit diperbesar untuk keterbacaan */
+  background-color: rgba(255, 255, 255, 0.6); /* Latar belakang input lebih solid */
+  color: #333; /* Warna teks menjadi lebih gelap agar lebih terlihat */
+  margin-left: 0px; /* Menggeser input lebih ke kiri */
+  width: calc(100% - 20px); /* Mengurangi lebar sesuai dengan margin kiri */
+}
+
+.input-field::placeholder {
+  color: #555; /* Placeholder yang lebih gelap agar mudah terbaca */
+  font-size: 14px; /* Ukuran font placeholder sedikit lebih kecil */
+}
+
+
+.register-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px; /* Mengurangi padding untuk kesesuaian */
+  font-size: 16px; /* Sesuaikan ukuran font */
+  width: 100%; /* Mengambil lebar penuh dari container */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Tambahkan sedikit margin atas */
+}
+
+.register-btn:hover {
+  background-color: #45a049;
+}
+
+
+/* Styling umum untuk tombol Google dan Apple */
+.social-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 140px;
+  margin: 0 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.google-btn img,
+.apple-btn img {
+  width: 20px;
+  margin-right: 8px;
+}
+
+/* Styling untuk teks "Atau daftar dengan" dengan garis di kedua sisi */
+.or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #555;
+  margin-top: 20px;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.or-divider:not(:empty)::before {
+  margin-right: 10px;
+}
+
+.or-divider:not(:empty)::after {
+  margin-left: 10px;
+}

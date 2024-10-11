@@ -1,0 +1,32 @@
+body {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  height: 300px;
+  position: relative;
+  animation: logoMove 4s ease-out forwards;
+}
+
+/* Animasi logo untuk berhenti di tengah */
+@keyframes logoMove {
+  0% {
+    transform: translate(-400px, -200px) rotate(0deg); /* Mulai dari luar layar */
+  }
+  80% {
+    transform: translate(0, 0) rotate(340deg); /* Hampir sampai di tengah, melambat */
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg); /* Berhenti tepat di tengah */
+  }
+}

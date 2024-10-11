@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Arial", sans-serif;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2f3e46;
+  }
+
+  .left-header{
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 30px; 
+    margin-right: 10px;
+  }
+
+  .profile img{
+    width: 30px;
+    margin-right: 20px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+
+  nav ul li {
+    margin-left: 20px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; 
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .profile {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Dropdown tersembunyi secara default */
+  .dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 120px;
+  }
+  
+  /* Dropdown item */
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+
+  .landing-page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .landing-page-in {
+    padding: 40px 0; /* Hilangkan padding kiri dan kanan */
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .image-slide {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image-slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-slide {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image-slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    border-radius: 50%; /* Tetap membuat panah berbentuk lingkaran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(255, 255, 255, 0.7); Hapus atau komentari bagian ini */
+    background-color: transparent; /* Pastikan tidak ada background */
+  }
+  
+  .arrow img {
+    width: 100%; /* Ikon panah tetap terlihat */
+    height: 100%;
+  }
+  
+  .arrow.left {
+    left: 10px;
+  }
+  
+  .arrow.right {
+    right: 10px;
+  }
+  
+  .arrow:hover {
+    opacity: 1;
+  }
+  
+  
+
+  .slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.5);  Hapus atau komentari bagian ini untuk menghilangkan latar hitam */
+    padding: 15px 25px;
+    border-radius: 5px;
+    max-width: 80%; /* Tentukan lebar maksimal */
+  }
+  
+  .slide-caption h3 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+  }
+  
+  .caption-info {
+    display: flex;
+    gap: 20px; /* Jarak antara tanggal dan penulis */
+    font-size: 14px;
+  }
+  
+  .caption-info .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+  
+  .caption-info div {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .sidebar {
+    width: 30%;
+    padding-left: 20px;
+  }
+
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Untuk menghindari elemen keluar dari container */
+  }
+  
+  .tab {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    flex: 1;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .tab img {
+    margin-right: 10px;
+  }
+  
+  .divider {
+    width: 1px;
+    background-color: #ddd;
+    height: 100%;
+  }
+  
+  .latest, .podcast {
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .latest {
+    background-color: #f9f9f9; /* Warna latar untuk tab Latest */
+  }
+  
+  .podcast {
+    background-color: #f9f9f9; /* Warna latar untuk tab Podcast */
+  }
+  
+  .latest:hover, .podcast:hover {
+    background-color: #eaeaea;
+  }
+  
+
+  .article-list {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .article-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .article-item img {
+    width: 80px; /* Sesuaikan lebar gambar */
+    height: 80px; /* Sesuaikan tinggi gambar */
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+    border-radius: 5px;
+    object-fit: cover; /* Menjaga proporsi gambar */
+  }
+  
+  .article-item p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold; /* Sesuaikan dengan tampilan gambar */
+  }
+  
+  .article-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .content {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1; /* Agar berada di atas overlay */
+  }
+
+  .content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  .logo-mid img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .buttons button {
+    background-color: #387F39;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .buttons button a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+  }
+
+  .buttons button:hover {
+    background-color: #ced4da;
+  }

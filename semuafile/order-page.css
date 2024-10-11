@@ -1,0 +1,251 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  /* Gunakan 100% untuk layar lebar */
+  max-width: 1200px;
+  /* Batasi agar tidak terlalu lebar di layar besar */
+  margin: auto;
+  padding: 20px;
+  /* Tambahkan padding agar tidak terlalu mepet */
+}
+
+/* Media query untuk layar yang lebih kecil */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    /* Agar tidak terlalu sempit di layar kecil */
+  }
+}
+
+/* Header Styling */
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2f3e46;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+}
+
+.center-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.center-header .recycle-logo img {
+  width: 50px;
+}
+
+.logo img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.profile img {
+  width: 30px;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+main {
+  padding: 20px;
+  width: 100%;
+}
+
+.order-header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.order-header h2 {
+  margin: 0;
+}
+
+.brand {
+  font-size: 14px;
+  color: #666;
+  margin-left: 3px;
+}
+
+.progress-bar {
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.line {
+  width: 95%;
+  height: 1px;
+  background: #ddd;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20px;
+  margin-inline: auto;
+  z-index: 10;
+}
+
+.active-line {
+  background: #ffc107;
+  /* Matches the active step color */
+}
+
+.progress-step-container {
+  display: flex;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.progress-step-status {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-step-container.active {
+  background-color: #000;
+}
+
+.progress-step {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step.active {
+  background: #ffc107;
+}
+
+.order-details {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-info h3 {
+  margin: 0;
+}
+
+.quantity-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity-selector .btn {
+  padding: 5px 10px;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.total {
+  margin: 20px 0;
+  text-align: right;
+}
+
+.total p,
+.total h3 {
+  margin: 5px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.sell-btn {
+  width: 30%;
+  text-align: center;
+  padding: 15px;
+  background: #8f9779;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sell-btn:hover {
+  background: #788d64;
+}
+
+.btn-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
